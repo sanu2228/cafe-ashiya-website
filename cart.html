@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .cart-item {
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px auto;
+            border: 1px solid #ddd;
+            max-width: 400px;
+        }
+
+        .cart-item p {
+            margin: 0;
+        }
+
+        .empty-cart {
+            color: #888;
+        }
+
+        .remove-button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .remove-button:hover {
+            background-color: #ff3333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <div id="cart-items"></div>
+
+    <script>
+        // Load cart from localStorage
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        const cartItemsContainer = document.getElementById("cart-items");
+
+        // Display items in cart
+        function displayCartItems() {
+            cartItemsContainer.innerHTML = "";
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = "<p class='empty-cart'>Your cart is empty.</p>";
+            } else {
+                cart.forEach((item, index) => {
+                    const itemDiv = document.createElement("div");
+                    itemDiv.className = "cart-item";
+                    itemDiv.innerHTML = `
+                        <p>${item}</p>
+                        <button class="remove-button" onclick="removeFromCart(${index})">Remove</button>
+                    `;
+                    cartItemsContainer.appendChild(itemDiv);
+                });
+            }
+        }
+
+        // Remove item from cart with alert message
+        function removeFromCart(index) {
+            const item = cart[index];
+            if (confirm(`Are you sure you want to remove "${item}" from the cart?`)) {
+                cart.splice(index, 1);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                displayCartItems();
+                alert(`${item} has been removed from your cart.`);
+            }
+        }
+
+        // Initialize display
+        displayCartItems();
+    </script>
+</body>
+</html>

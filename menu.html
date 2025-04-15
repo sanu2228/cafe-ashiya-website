@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Ashiya | From breakfast to breaks, your favourite go-to place</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .lec_gold {
+            color: #ffd700;
+        }
+
+        h5, h3 {
+            text-align: center;
+        }
+
+        .lec_section {
+            background-color: #333;
+            color: #fff;
+            padding: 50px 20px;
+            position: relative;
+        }
+
+        .container-fluid {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .lec_slider_single {
+            display: flex;
+            justify-content: flex-start;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .lec_lm_type_i_item {
+            width: 300px;
+            flex-shrink: 0;
+            margin: 0 10px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .lec_lm_type_i_item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .lec_lm_type_i_item_desc {
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .lec_lm_type_i_item h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .lec_price {
+            color: #ffd700;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .slider-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .slider-buttons button {
+            padding: 10px 20px;
+            background-color: #ffd700;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .slider-buttons button:hover {
+            background-color: #daa520;
+        }
+
+        .buy-now-btn {
+            background-color: #ffd700;
+            color: #333;
+            border: none;
+            padding: 8px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .buy-now-btn:hover {
+            background-color: #daa520;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="lec_gold lec_title_counter"><h2><center>Cafe Ashiya</center></h2></div>
+
+    <div class="lec_title_counter"><h3>MENU</h3></div>
+
+    <section class="lec_section" id="all_time_favourites">
+        <div class="container-fluid text-center">
+            <h2 class="lec_gold lec_title_counter">All Time Favourites</h2>
+            <h3 class="lec_gold_subtitle">Breakfast to Breaks <br>Authentic Indian Style</h3>
+
+            <div class="lec_slider_single" id="menu-slider">
+                <!-- Sample Menu Item with Buy Now Button -->
+                <div class="lec_lm_type_i_item">
+                    <img src="C:\Users\SANIYA\OneDrive\Pictures\cafe\bunmuska.avif" alt="bun-maska-chai">
+                    <div class="lec_lm_type_i_item_desc">
+                        <h3 class="lec_gold">Bun Muska Chai</h3>
+                        <p>This classic combination always seals the deal! Bun Maska Chai smothered with butter, paired with the warmth of Irani Chai.</p>
+                        <p class="lec_price">₹ 55</p>
+                        <a href="file:///F:/bun%20muska%20chai.html" class="buy-now-btn" onclick="showBuyAlert(event, 'Bun Muska Chai')">Buy Now</a>
+                    </div>
+                </div>
+
+<div class="lec_lm_type_i_item">
+                    <img src="C:\Users\SANIYA\OneDrive\Pictures\cafe\Irani Black Tea.jpg" alt="irani-black-tea">
+                    <div class="lec_lm_type_i_item_desc">
+                        <h3 class="lec_gold">Irani Black Tea</h3>
+                        <p>Our Irani Black tea, infused with rose petals and saffron, offers a truly refreshing experience.</p>
+                        <p class="lec_price">₹ 399</p>
+                        <a href="file:///F:/iraniBlackTea.html" class="buy-now-btn" onclick="showBuyAlert(event, 'Irani Black Tea')">Buy Now</a>
+                    </div>
+                </div>
+
+                <div class="lec_lm_type_i_item">
+                    <img src="C:\Users\SANIYA\OneDrive\Pictures\cafe\cappucino.jpeg" alt="cappuccino">
+                    <div class="lec_lm_type_i_item_desc">
+                        <h3 class="lec_gold">Cappuccino</h3>
+                        <p>Enjoy the perfect mix of strong espresso and creamy milk, topped with a light, foamy layer—our cappuccino is cozy and satisfying in every sip.</p>
+                        <p class="lec_price">₹ 299</p>
+                        <a href="file:///F:/Cappuccinoo.html" class="buy-now-btn" onclick="showBuyAlert(event, 'Cappuccino')">Buy Now</a>
+                    </div>
+                </div>
+
+                <div class="lec_lm_type_i_item">
+                    <img src="C:\Users\SANIYA\OneDrive\Pictures\cafe\ammericano coffe.jpeg" alt="americano">
+                    <div class="lec_lm_type_i_item_desc">
+                        <h3 class="lec_gold">Americano Coffee</h3>
+                        <p>Our Americano is a smooth and bold coffee, made by adding hot water to espresso for a rich, full-flavored cup.</p>
+                        <p class="lec_price">₹ 499</p>
+                        <a href="file:///F:/Americano%20Coffee.html" class="buy-now-btn" onclick="showBuyAlert(event, 'Americano Coffee')">Buy Now</a>
+                    </div>
+                </div>
+                <div class="lec_lm_type_i_item">
+                    <img src="C:\Users\SANIYA\OneDrive\Pictures\cafe\Classic Chicken Club Sandwich.jpeg" alt="sandwich">
+                    <div class="lec_lm_type_i_item_desc">
+                        <h3 class="lec_gold">Classic Chicken Club Sandwich</h3>
+                        <p>Our Classic Chicken Club Sandwich is packed with tender chicken, crispy bacon, fresh lettuce, and tomatoes, all layered between toasted bread for a hearty and satisfying meal.</p>
+                        <p class="lec_price">₹ 125</p>
+                        <a href="file:///F:/ClassicChickenClubSandwichForm.html" class="buy-now-btn" onclick="showBuyAlert(event, 'Classic Chicken Club Sandwich')">Buy Now</a>
+                    </div>
+                </div>
+
+                <div class="lec_lm_type_i_item">
+                    <img src="C:\Users\SANIYA\OneDrive\Pictures\cafe\Arabian Halloumi Ciabatta.jpeg" alt="ciabatta">
+                    <div class="lec_lm_type_i_item_desc">
+                        <h3 class="lec_gold">Arabian Halloumi Ciabatta</h3>
+                        <p>Our Arabian Halloumi Ciabatta brings together the rich, savory flavor of grilled halloumi cheese with fresh veggies, all tucked inside a soft, toasted ciabatta for a deliciously unique bite.</p>
+                        <p class="lec_price">₹ 110</p>
+                        <a href="file:///F:/Arabian%20Halloumi%20Ciabatta.html" class="buy-now-btn" onclick="showBuyAlert(event, 'Arabian Halloumi Ciabatta')">Buy Now</a>
+                    </div>
+                </div>
+
+                <div class="lec_lm_type_i_item">
+                    <img src="C:\Users\SANIYA\OneDrive\Pictures\cafe\Smoothie.jpg" alt="smoothie">
+                    <div class="lec_lm_type_i_item_desc">
+                        <h3 class="lec_gold">Smoothie</h3>
+                        <p>Our smoothies are a refreshing blend of fresh fruits and yogurt, perfectly mixed to give you a healthy and delicious treat in every sip.</p>
+                        <p class="lec_price">₹ 40</p>
+                        <a href="file:///E:/cafe%20website%20project/Smoothie.html" class="buy-now-btn" onclick="showBuyAlert(event, 'Smoothie')">Buy Now</a>
+                    </div>
+                </div>
+                <div class="lec_lm_type_i_item">
+                    <img src="C:\Users\SANIYA\OneDrive\Pictures\cafe\Donut.webp" alt="donut">
+                    <div class="lec_lm_type_i_item_desc">
+                        <h3 class="lec_gold">Donut</h3>
+                        <p>Our donuts are soft, fluffy, and coated with just the right amount of sweetness, making them the perfect treat to brighten your day.</p>
+                        <p class="lec_price">₹ 60</p>
+                        <a href="file:///F:/Donut.html" class="buy-now-btn" onclick="showBuyAlert(event, 'Donut')">Buy Now</a>
+                    </div>
+                </div>
+
+                <div class="lec_lm_type_i_item">
+                    <img src="C:\Users\SANIYA\OneDrive\Pictures\cafe\Omelette and Half Fry.avif" alt="omelette-half-fry">
+                    <div class="lec_lm_type_i_item_desc">
+                        <h3 class="lec_gold">Omelette and Half Fry</h3>
+                         <p>Our donuts are soft, fluffy, and coated with just the right amount of sweetness, making them the perfect treat to brighten your day.</p>
+                        <p class="lec_price">₹ 30</p>
+                        <a href="file:///F:/OmeletteAndHalfFry.html" class="buy-now-btn" onclick="showBuyAlert(event, 'Omelette and Half Fry')">Buy Now</a>
+                    </div>
+                </div>
+
+<div class="lec_lm_type_i_item">
+                    <img src="C:\Users\SANIYA\OneDrive\Pictures\cafe\Bun Maska Jam.jpeg" alt="bun-maska-jam">
+                    <div class="lec_lm_type_i_item_desc">
+                        <h3 class="lec_gold">Bun Maska Jam</h3>
+                        <p>Add a sweet twist to the classic Bun Maska Jam combination and enjoy a nostalgic treat!</p>
+      <p class="lec_price">₹ 50</p>
+                    <a href="file:///F:/BunMaskaJam.html" class="buy-now-btn" onclick="showBuyAlert(event, 'Bun Muska Jam')">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+
+                <!-- Additional menu items can be added here with the same pattern -->
+            </div>
+
+            <div class="slider-buttons">
+                <button id="prevBtn">Previous</button>
+                <button id="nextBtn">Next</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript to handle the image slider
+        const slider = document.getElementById('menu-slider');
+        let scrollPosition = 0;
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (scrollPosition < (slider.scrollWidth - slider.clientWidth)) {
+                scrollPosition += 320;
+                slider.scrollTo({
+                    top: 0,
+                    left: scrollPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (scrollPosition > 0) {
+                scrollPosition -= 320;
+                slider.scrollTo({
+                    top: 0,
+                    left: scrollPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+
+        // Show alert on Buy Now button click
+        function showBuyAlert(event, itemName) {
+            event.preventDefault();  // Prevents the link from opening immediately
+            alert(`You are about to purchase ${itemName}.`);
+            window.location.href = event.target.href;  // Redirects to the product page after alert
+        }
+    </script>
+</body>
+
+</html>

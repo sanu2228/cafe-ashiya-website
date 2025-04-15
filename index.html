@@ -1,0 +1,165 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Ashiya - Interactive Coffee Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Navigation Bar Styling */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(192, 174, 120);
+            text-align: center;
+        }
+
+        ul li {
+            float: left;
+        }
+
+        ul li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        ul li a:hover {
+            background-color: hsl(0, 100%, 90%);
+        }
+
+        .active {
+            background-color: white;
+        }
+
+        /* Container and Image Styling */
+        .container {
+            position: relative;
+            max-width: 100%;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Overlay Styling */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            font-size: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Café Name on Top of the Image */
+        .cafe-name {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Text Block Styling */
+        .text-block {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: transparent;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        /* Button Styling */
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="file:///F:/about%20us.html">About Us</a></li>
+        <li><a href="file:///F:/menu.html">Menu</a></li>
+        <!-- Cart Icon links to cart.html -->
+        <li class="cart"><a href="file:///F:/cart.html">🛒 Cart <span id="cart-count" class="cart-count">0</span></a></li>
+    </ul>
+
+    <!-- Image Container with Overlay -->
+    <div class="container">
+        <!-- Café Name on top of the image -->
+        <div class="cafe-name">CAFE ASHIYA</div>
+        <img src="C:\Users\SANIYA\OneDrive\Pictures\cafe\as.jpg" alt="Café Aroma Coffee" class="image">
+        <div class="overlay">
+            <b>WELCOME TO CAFE ASHIYA</b>
+        </div>
+        <div class="text-block">
+            <p>COFFEE MAKES A DAY AT CAFE ASHIYA</p>
+        </div>
+    </div>
+
+    <!-- Add to Cart Button -->
+    <button class="button" onclick="addToCart('Coffee')">Add Coffee to Cart</button>
+
+    <script>
+        // Initialize or retrieve cart data from local storage
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // Function to add an item to the cart with an alert message
+        function addToCart(item) {
+            cart.push(item);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            updateCartCount();
+            alert(item + " has been added to your cart!");
+        }
+
+        // Function to update cart count
+        function updateCartCount() {
+            document.getElementById("cart-count").innerText = cart.length;
+        }
+
+        // Update cart count on page load
+        updateCartCount();
+    </script>
+</body>
+</html>
